@@ -1,0 +1,138 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url(../images/avatar_fundo.png);
+    text-align: center;
+    background-size: cover;
+
+    @media (max-width: 768px) {
+        padding-top: calc(50vw + 25px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: 0px;
+    }
+
+    .button {
+        margin-left: -50px;
+        margin-top: 1vw;
+        margin-bottom: 8px;
+        color: black;
+
+        @media (max-width: 768px) {
+            margin-left: 15px;
+            width: 300px;
+            height: 55px;
+            margin-bottom: 16px;
+        }
+    }
+
+    .button2 {
+        margin-top: 1vw;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 60px;
+        font-size: 18px;
+        color: variaveis.$corTextoSecundario;
+        background-color: gray;
+        text-transform: uppercase;
+        border-radius: 4px;
+        text-decoration: none;
+        letter-spacing: 1px;
+        border: 1px solid gray;
+        cursor: pointer;
+    
+        &:hover{
+            background-color: lighten(black, 40%);
+        }
+
+        @media (max-width: 768px) {
+            margin-left: 15px;
+            width: 300px;
+            height: 55px;
+            margin-bottom: 12px;
+        }
+    }
+
+    .button3 {
+        margin-top: 1.3vw;
+        border-radius: 4px;
+        height: 50px;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+            margin-left: 30px;
+        }
+    }
+
+    &__content {
+        max-width: 640px;
+
+        .img2 {
+            height: 50px;
+            margin-left: -508px;
+            margin-top: -50px;
+
+            @media (max-width: 768px) {
+                height: 45px;
+                margin-left: -130px;
+            }
+        }
+
+        p {
+            font-weight: bold;
+            color: white;
+            text-align: justify;
+            margin-left: -50px;
+            max-width: 550px;
+            margin-top: 32px;
+
+            @media (max-width: 768px) {
+                margin-left: 0;
+                margin-top: 12px;
+                margin-bottom: 12px;
+            }
+        }
+
+        &__branding {
+            max-width: 320px;
+            margin: 0 auto 38px;
+
+            .img1 {
+                height: 130px;
+                margin-left: -300px;
+
+                @media (max-width: 768px) {
+                    height: 60px;
+                    margin-left: -140px;
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        .title--small {
+            margin-bottom: 64px;
+        }
+
+        p {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-top: 60px;
+            }
+        }
+
+        &__botoes {
+            display: flex;
+            margin-right: 16px;
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+    }
+}
