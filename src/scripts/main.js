@@ -13,20 +13,8 @@ document.addEventListener('DOMContentLoaded', function(){
             botao.target.classList.add('shows__tabs__button--is-active');
         })
     }
-
-    // Seção FAQ, accordion
-    for (let i = 0; i < questions.length; i++) {
-        questions[i].addEventListener('click', abreOuFechaResposta);
-    }
 })
 
-
-function abreOuFechaResposta (elemento) {
-    const classe = 'faq__questions__item--is-open';
-    const elementoPai = elemento.target.parentNode;
-
-    elementoPai.classList.toggle(classe);
-}
 
 function removeBotaoAtivo() {
     const buttons = document.querySelectorAll('[data-tab-button]');
@@ -43,9 +31,3 @@ function escondeTodasAbas() {
         tabsContainer[i].classList.remove('shows__list--is-active');
     }
 }
-
-$(document).ready(function(){
-    $('.menu-hamburguer').click(function(){
-        $('nav').slideToggle();
-    })
-})
